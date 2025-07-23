@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Now! Indonesia | RendyTravel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://tugas.unsia.net/uas/files/favicon.ico">
+    <link rel="stylesheet" href="stylevideo.css" />
+  </head>
+  <body>
+       <header>
+        <div class="header-left">
+          <button id="open-menu-btn"><i class="material-icons">menu</i></button>
+          
+          <!-- Sidebar -->
+          <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+              <button id="close-btn" class="icon-button">
+                <svg class="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              </button>
+              <div class="logo-container">
+                <a href="https://tugas.unsia.net/uas" title="RendyTravel">
+                  <img src="https://tugas.unsia.net/uas/files/logo1.svg" alt="RendyTube Logo" class="desktop">
+                </a>  
+              </div>
+            </div>
+        
+            <div class="sidebar-content">
+              <div class="menu-section">
+                <a href="https://tugas.unsia.net/uas" class="menu-item active">
+                  <svg class="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  <span>Home</span>
+                </a>
+                <a href="https://tugas.unsia.net/uas/videos" class="menu-item">
+                  <svg class="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
+                  <span>Videos</span>
+                </a>
+                <a href="https://tugas.unsia.net/uas/blog" class="menu-item">
+                  <svg class="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span>Blog</span>
+                </a>
+              </div>
+              <hr>
+              <div class="menu-section">
+                <a href="https://tugas.unsia.net/uas/about-me" class="menu-item">
+                  <svg class="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                  <span>About Me</span>
+                </a>
+                <a href="https://tugas.unsia.net/uas/contact" class="menu-item">
+                  <svg class="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+          </aside>
+          
+          <!-- Overlay -->
+          <div id="overlay" class="overlay hidden"></div>
+            
+          <div class="logo">
+            <a href="https://tugas.unsia.net/uas" title="RendyTravel">
+              <img src="https://tugas.unsia.net/uas/files/logo1.svg" alt="RendyTube Logo" class="desktop">
+              <img src="https://tugas.unsia.net/uas/files/icon.svg" alt="RendyTube Logo" class="mobile">
+            </a>  
+          </div>
+        </div>
+        
+        <div class="header-center">
+            <input type="text" id="search-input" class="search-bar" placeholder="Search....">
+            <button class="search-button">
+                <i class="material-icons">search</i>
+            </button>
+            <div id="suggestions-container" class="suggestions-container hidden"></div>
+        </div>
+        <div class="header-right">
+            <div class="channel-picture">
+              <a href="https://tugas.unsia.net/uas/profile" title="Rendy Profile">
+                <img class="profile-picture" src="https://tugas.unsia.net/uas/files/account.png" alt="Channel">
+              </a>  
+            </div>
+        </div>
+    </header>
+    
+    <!------ Content----->
+    
+    <div class="page-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="video-player-container">
+                    <video controls autoplay>
+                      <source src="https://tugas.unsia.net/uas/files/vid1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <h1 class="video-title">Geography Now! Indonesia</h1>
+
+                <div class="video-actions-container">
+                    <div class="channel-info">
+                        <img src="https://tugas.unsia.net/uas/files/account.png" alt="Channel Avatar" class="channel-avatar">
+                        <div class="channel-name">Rendy</div>
+                        <a href="https://tugas.unsia.net/uas/about-me">
+                          <button class="about-me-button">About Me</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="description-box" id="description-box">
+                    <div class="description-meta">
+                        <span>7.3M views</span>
+                        <span>&nbsp;•&nbsp;</span>
+                        <span>7 years ago</span>
+                    </div>
+                    <p class="description-text" id="description-text">So many things I didn't get to mention or elaborate on, but in a nutshell, Indonesia is basically the "Kingpin" of Southeast Asia. It's big, lush, and full of vibrant people you should learn about! Enjoy!.
+#Indonesia #wonderful #nature</p>
+                    <button class="show-more-btn" id="show-more-btn">Show more</button>
+                </div>
+
+                <div class="blog-posts-section">
+                    <h3 class="right-column-header">Recommended Blog Posts</h3><br>
+                    <div class="blog-posts-container">
+                        <a href="https://tugas.unsia.net/uas/blog/blog1.html" class="blog-post-card" title="Mount Rinjani Best Treks in the World">
+                            <img src="https://tugas.unsia.net/uas/files/bb1.jpg" alt="Blog post thumbnail" class="blog-post-thumbnail">
+                            <div class="suggestion-info">
+                                <h3 class="suggestion-title">Mount Rinjani Best Treks in the World</h3>
+                                <p class="suggestion-source">Rendy</p>
+                                <p class="suggestion-meta">Green Rinjani &bull; 4 min read</p>
+                            </div>
+                        </a>
+                        <a href="https://tugas.unsia.net/uas/blog/blog2.html" class="blog-post-card" title="Komodo Islands Backpacking Guide">
+                            <img src="https://tugas.unsia.net/uas/files/bb2.jpg" alt="Blog post thumbnail" class="blog-post-thumbnail">
+                            <div class="suggestion-info">
+                                <h3 class="suggestion-title">Komodo Islands Backpacking Guide</h3>
+                                <p class="suggestion-source">Rendy</p>
+                                <p class="suggestion-meta">bucketlistly &bull; 5 min read</p>
+                            </div>
+                        </a>
+                         <a href="https://tugas.unsia.net/uas/blog/blog3.html" class="blog-post-card" title="Bali Travel Guide for First-Timers">
+                            <img src="https://tugas.unsia.net/uas/files/b3.jpg" alt="Blog post thumbnail" class="blog-post-thumbnail">
+                            <div class="suggestion-info">
+                                <h3 class="suggestion-title">Bali Travel Guide for First-Timers</h3>
+                                <p class="suggestion-source">Rendy</p>
+                                <p class="suggestion-meta">girleatworld &bull; 7 min read</p>
+                            </div>
+                        </a>
+                        <a href="https://tugas.unsia.net/uas/blog/blog4.html" class="blog-post-card" title="Mount Bromo: A Day Trip to see a Volcano in Indonesia">
+                            <img src="https://tugas.unsia.net/uas/files/bb4.jpg" alt="Blog post thumbnail" class="blog-post-thumbnail">
+                            <div class="suggestion-info">
+                                <h3 class="suggestion-title">Mount Bromo: A Day Trip to see a Volcano in Indonesia</h3>
+                                <p class="suggestion-source">Rendy</p>
+                                <p class="suggestion-meta">girleatworld &bull; 6 min read</p>
+                            </div>
+                        </a>
+                        <a href="https://tugas.unsia.net/uas/blog/blog5.html" class="blog-post-card" title="Things to see and do in Jakarta">
+                            <img src="https://tugas.unsia.net/uas/files/b5.jpg" alt="Blog post thumbnail" class="blog-post-thumbnail">
+                            <div class="suggestion-info">
+                                <h3 class="suggestion-title">Things to see and do in Jakarta</h3>
+                                <p class="suggestion-source">Rendy</p>
+                                <p class="suggestion-meta">passporter &bull; 7 min read</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <h3 class="right-column-header">Watch more awesomeness in Indonesia</h3>
+                <a href="https://tugas.unsia.net/uas/videos/video2.html" class="video-suggestion" title="INDONESIA MAKES US FEEL ALIVE">
+                    <img src="https://tugas.unsia.net/uas/files/t2.jpg" alt="Video thumbnail" class="video-suggestion-thumbnail">
+                    <div class="suggestion-info">
+                        <h3 class="suggestion-title">INDONESIA MAKES US FEEL ALIVE</h3>
+                        <p class="suggestion-source">Rendy</p>
+                        <p class="suggestion-meta">2M views &bull; 2 years ago</p>
+                    </div>
+                </a>
+                <a href="https://tugas.unsia.net/uas/videos/video3.html" class="video-suggestion" title="Luxury Train From Jogjakarta to Surabaya">
+                    <img src="https://tugas.unsia.net/uas/files/t3.jpg" alt="Video thumbnail" class="video-suggestion-thumbnail">
+                    <div class="suggestion-info">
+                        <h3 class="suggestion-title">Luxury Train From Jogjakarta to Surabaya</h3>
+                        <p class="suggestion-source">Rendy</p>
+                        <p class="suggestion-meta">1.2M views &bull; 11 months ago</p>
+                    </div>
+                </a>
+                <a href="https://tugas.unsia.net/uas/videos/video4.html" class="video-suggestion" title="Hiking Rinjani 3726M">
+                    <img src="https://tugas.unsia.net/uas/files/t4.jpg" alt="Video thumbnail" class="video-suggestion-thumbnail">
+                    <div class="suggestion-info">
+                        <h3 class="suggestion-title">Hiking Rinjani 3726M</h3>
+                        <p class="suggestion-source">Rendy</p>
+                        <p class="suggestion-meta">467k views &bull; 2 years ago</p>
+                    </div>
+                </a>
+                <a href="https://tugas.unsia.net/uas/videos/video5.html" class="video-suggestion" title="We sailed around KOMODO ISLAND">
+                    <img src="https://tugas.unsia.net/uas/files/t5.jpg" alt="Video thumbnail" class="video-suggestion-thumbnail">
+                    <div class="suggestion-info">
+                        <h3 class="suggestion-title">We sailed around KOMODO ISLAND</h3>
+                        <p class="suggestion-source">Rendy</p>
+                        <p class="suggestion-meta">587k views &bull; 2 years ago</p>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+    
+    <!------ End of Content----->
+    
+    <footer>
+      <p>&copy; Mohammad Rendy Amril - 240401010288 - IF201</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Sidebar Logic ---
+            const menuBtn = document.getElementById('open-menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            function toggleSidebar() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('hidden');
+            }
+
+            menuBtn.addEventListener('click', toggleSidebar);
+            closeBtn.addEventListener('click', toggleSidebar);
+            overlay.addEventListener('click', toggleSidebar);
+            
+            // --- Description Box Logic ---
+            const descriptionBox = document.getElementById('description-box');
+            const descriptionText = document.getElementById('description-text');
+            const showMoreBtn = document.getElementById('show-more-btn');
+
+            descriptionBox.addEventListener('click', (e) => {
+                if (e.target !== showMoreBtn) {
+                     descriptionText.classList.toggle('expanded');
+                     if (descriptionText.classList.contains('expanded')) {
+                        showMoreBtn.textContent = 'Show less';
+                    } else {
+                        showMoreBtn.textContent = 'Show more';
+                    }
+                }
+            });
+            
+            showMoreBtn.addEventListener('click', () => {
+                descriptionText.classList.toggle('expanded');
+                if (descriptionText.classList.contains('expanded')) {
+                    showMoreBtn.textContent = 'Show less';
+                } else {
+                    showMoreBtn.textContent = 'Show more';
+                }
+            });
+
+
+            // --- Search Bar Logic ---
+            const searchInput = document.getElementById('search-input');
+            const suggestionsContainer = document.getElementById('suggestions-container');
+            const searchButton = document.querySelector('.search-button');
+
+            const suggestionsData = [
+                { name: 'Geography Now! Indonesia', url: 'https://tugas.unsia.net/uas/videos/video1.html' },
+                { name: 'INDONESIA MAKES US FEEL ALIVE', url: 'https://tugas.unsia.net/uas/videos/video2.html' },
+                { name: 'Luxury Train From Jogjakarta to Surabaya', url: 'https://tugas.unsia.net/uas/videos/video3.html' },
+                { name: 'Hiking Rinjani 3726M', url: 'https://tugas.unsia.net/uas/videos/video4.html' },
+                { name: 'We sailed around KOMODO ISLAND', url: 'https://tugas.unsia.net/uas/videos/video5.html' },
+                { name: 'Mount Rinjani Best Treks in the World', url: 'https://tugas.unsia.net/uas/blog/blog1.html' },
+                { name: 'Komodo Islands Backpacking Guide', url: 'https://tugas.unsia.net/uas/blog/blog2.html' },
+                { name: 'Bali Travel Guide for First-Timers', url: 'https://tugas.unsia.net/uas/blog/blog3.html' },
+                { name: 'Mount Bromo: A Day Trip to see a Volcano in Indonesia', url: 'https://tugas.unsia.net/uas/blog/blog4.html' },
+                { name: 'Things to see and do in Jakarta', url: 'https://tugas.unsia.net/uas/blog/blog5.html' },
+            ];
+
+            let activeSuggestionIndex = -1;
+
+            function showSuggestions(input) {
+                suggestionsContainer.innerHTML = '';
+                if (input.length === 0) {
+                    suggestionsContainer.classList.add('hidden');
+                    return;
+                }
+
+                const filteredSuggestions = suggestionsData.filter(item =>
+                    item.name.toLowerCase().includes(input.toLowerCase())
+                );
+
+                if (filteredSuggestions.length > 0) {
+                    filteredSuggestions.forEach((item) => {
+                        const div = document.createElement('div');
+                        div.textContent = item.name;
+                        div.classList.add('suggestion-item');
+                        div.addEventListener('click', () => {
+                            window.location.href = item.url;
+                        });
+                        suggestionsContainer.appendChild(div);
+                    });
+                    suggestionsContainer.classList.remove('hidden');
+                } else {
+                    suggestionsContainer.classList.add('hidden');
+                }
+                 activeSuggestionIndex = -1; 
+            }
+            
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.header-center')) {
+                    suggestionsContainer.classList.add('hidden');
+                }
+            });
+
+            searchInput.addEventListener('input', () => showSuggestions(searchInput.value));
+            
+            searchInput.addEventListener('focus', () => {
+                 if (searchInput.value.length > 0) {
+                    showSuggestions(searchInput.value);
+                }
+            });
+
+            searchButton.addEventListener('click', () => {
+                const items = suggestionsContainer.querySelectorAll('.suggestion-item');
+                if (activeSuggestionIndex > -1 && items[activeSuggestionIndex]) {
+                     const selectedSuggestion = suggestionsData.filter(item => item.name.toLowerCase().includes(searchInput.value.toLowerCase()))[activeSuggestionIndex];
+                     window.location.href = selectedSuggestion.url;
+                } else if (searchInput.value) {
+                    alert(`Searching for: ${searchInput.value}`);
+                }
+            });
+
+            searchInput.addEventListener('keydown', (e) => {
+                const items = suggestionsContainer.querySelectorAll('.suggestion-item');
+                if (items.length === 0) return;
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    activeSuggestionIndex = (activeSuggestionIndex + 1) % items.length;
+                    updateActiveSuggestion(items);
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    activeSuggestionIndex = (activeSuggestionIndex - 1 + items.length) % items.length;
+                    updateActiveSuggestion(items);
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (activeSuggestionIndex > -1) {
+                        items[activeSuggestionIndex].click();
+                    } else if (searchInput.value) {
+                         alert(`Searching for: ${searchInput.value}`);
+                    }
+                }
+            });
+
+            function updateActiveSuggestion(items) {
+                items.forEach(item => item.classList.remove('active'));
+                if (items[activeSuggestionIndex]) {
+                    items[activeSuggestionIndex].classList.add('active');
+                }
+            }
+        });
+    </script>
+    
+  </body>
+</html>
